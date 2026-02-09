@@ -3,6 +3,9 @@
     "packages": [
       "amfora",
       "cmatrix",
+      "clamav",
+      "clamd",
+      "clamav-update",
       "duf",
       "eog",
       "globalprotect-openconnect",
