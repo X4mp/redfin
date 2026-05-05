@@ -5,6 +5,7 @@
       "cmatrix",
       "duf",
       "eog",
+      "ghostty",
       "globalprotect-openconnect",
       "lshw",
       "mise",
@@ -17,7 +18,8 @@
       "hyperreal/amfora",
       "varlad/onefetch",
       "yuezk/globalprotect-openconnect",
-      "apicalshark/webapp-manager"
+      "apicalshark/webapp-manager",
+      "scottames/ghostty"
     ]
   }
 }
