@@ -68,6 +68,9 @@ echo "::endgroup::"
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
+# Install pi coding agent
+npm install -g @earendil-works/pi-coding-agent
+
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
