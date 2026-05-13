@@ -1,4 +1,4 @@
-# Run a one minute system benchmark
+# Run switch cleanup
 [group('System')]
 cleanup-switch:
     #!/usr/bin/env bash
