@@ -69,7 +69,9 @@ echo "::endgroup::"
 # dnf5 -y copr disable ublue-os/staging
 
 # Install pi coding agent
-npm install -g @earendil-works/pi-coding-agent
+curl -fsSL https://pi.dev/install.sh -o /tmp/pi-install.sh
+chmod +x /tmp/pi-install.sh
+/tmp/pi-install.sh
 
 #### Example for enabling a System Unit File
 
