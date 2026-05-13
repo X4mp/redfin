@@ -11,7 +11,8 @@
       "mise",
       "onefetch",
       "unzip",
-      "webapp-manager"
+      "webapp-manager",
+      "nodejs"
     ],
     "repos": [
       "jdxcode/mise",
