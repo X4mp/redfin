@@ -60,13 +60,8 @@ echo "::endgroup::"
 # fi
 # echo "::endgroup::"
 
-
-# Use a COPR Example:
-#
-# dnf5 -y copr enable ublue-os/staging
-# dnf5 -y install package
-# Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
+# Installing URL sourced packages
+dnf5 -y install https://schizo.cooking/resources/packages/zedless-1.4.4.rpm
 
 #### Example for enabling a System Unit File
 
