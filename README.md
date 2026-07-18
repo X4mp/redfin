@@ -1,6 +1,6 @@
 # Redfin - a Bluefin Fork
 
-This Bluefin fork is based on [ublue-os/image-template] and extends the Bluefin base image with custom software adaptions and will be extended in the future to be used as my daily workstation OS.
+Redfin extends [ghcr.io/ublue-os/bluefin-dx:stable](https://github.com/orgs/ublue-os/packages) with the package set and custom Just recipes I use on my daily workstation. It's built from [ublue-os/image-template](https://github.com/ublue-os/image-template), the standard scaffold for Universal Blue custom images.
 
 # Bluefin
 Bluefin is a cloud-native desktop operating system that reimagines the Linux desktop experience for modern computing environments.
@@ -10,6 +10,23 @@ Packages to be added to the base image can be configured via `packages.json`. Th
 
 Installation will use `build_files/build.sh` to parse `packages.json` and enable the packages before installing the packages.
 
+Currently `packages.json` adds:
+
+- `amfora` - terminal Gemini browser
+- `cmatrix` - terminal eye candy
+- `duf` - disk usage/free utility
+- `eog` - Eye of GNOME image viewer
+- `ghostty` - GPU-accelerated terminal emulator
+- `globalprotect-openconnect` - GlobalProtect VPN client
+- `lshw` - hardware lister
+- `mise` - dev tool/runtime version manager
+- `onefetch` - git repo summary tool
+- `sassc` - required to build user GNOME Shell themes
+- `unzip`
+- `webapp-manager` - turns websites into desktop apps
+
+See `SETUP.md` for the Flatpak and Brew packages installed post-install.
+
 # Justfile Documentation
 
 The `Justfile` contains various commands and configurations for building and managing container images and virtual machine images using Podman and other utilities.
@@ -17,7 +34,7 @@ To use it, you must have installed [just](https://just.systems/man/en/introducti
 
 ## Environment Variables
 
-- `image_name`: The name of the image (default: "image-template").
+- `image_name`: The name of the image (default: "redfin").
 - `default_tag`: The default tag for the image (default: "latest").
 - `bib_image`: The Bootc Image Builder (BIB) image (default: "quay.io/centos-bootc/bootc-image-builder:latest").
 
@@ -92,13 +109,3 @@ Runs shell check on all Bash scripts.
 ### `just format`
 
 Runs shfmt on all Bash scripts.
-
-## Community Examples
-
-These are images derived from this template (or similar enough to this template). Reference them when building your image!
-
-- [m2Giles' OS](https://github.com/m2giles/m2os)
-- [bOS](https://github.com/bsherman/bos)
-- [Homer](https://github.com/bketelsen/homer/)
-- [Amy OS](https://github.com/astrovm/amyos)
-- [VeneOS](https://github.com/Venefilyn/veneos)
